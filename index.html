@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Happy Bee</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="cover cover-left">
+        <h6>Copyright © 2024 Khosro shariatzadeh</h6>
+      </div>
+      <!-- <div class="cover cover-right"></div> -->
+
+      <div class="book">
+        <div class="book-page page-right turn" id="turn-1">
+          <!-- page 1 -->
+          <div class="page-front">
+            <div class="main-page">
+              <div class="list-main">
+                <a href="https://github.com/Khosroshariat/bee" target="_blank">
+                  <i class="bx bx-checkbox-square"></i>Git Repo</a
+                >
+                <a href="" target="_blank">
+                  <i class="bx bx-checkbox-square"></i>Portfolio</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/khosro-sh/"
+                  target="_blank"
+                >
+                  <i class="bx bx-checkbox-square"></i>Linkedin</a
+                >
+              </div>
+
+              <button onclick="openMenu()" class="btn-open">
+                <i class="bx bx-menu"></i>
+              </button>
+
+              <div class="menubar">
+                <span onclick="closeMenu()" class="btn-close"
+                  ><i class="bx bxs-x-circle"></i
+                ></span>
+                <a
+                  onclick="closeMenu()"
+                  class="link"
+                  href="https://github.com/Khosroshariat/bee"
+                  target="_blank"
+                  ><i class="bx bx-checkbox-square"></i> Git Repo</a
+                >
+                <a onclick="closeMenu()" class="link" href="" target="_blank"
+                  ><i class="bx bx-checkbox-square"></i> Portfolio</a
+                >
+                <a
+                  onclick="closeMenu()"
+                  class="link"
+                  href="https://www.linkedin.com/in/khosro-sh/"
+                  target="_blank"
+                  ><i class="bx bx-checkbox-square"></i> Linkedin</a
+                >
+              </div>
+
+              <h1>Butterflies</h1>
+              <p>
+                By moving your mouse to the gray frame of the next page, you
+                will make thousands of butterflies fly across the page.
+              </p>
+
+              <h5><i class="bx bxs-check-shield check-mark"></i> HTML</h5>
+              <h5><i class="bx bxs-check-shield check-mark"></i> CSS Layout</h5>
+              <h5>
+                <i class="bx bxs-check-shield check-mark"></i> CSS Animation
+              </h5>
+              <h5>
+                <i class="bx bxs-check-shield check-mark"></i> Javascript
+                Functions
+              </h5>
+              <h5>
+                <i class="bx bxs-check-shield check-mark"></i> Javascript If/Els
+              </h5>
+            </div>
+
+            <!-- Next button -->
+            <span class="nextprev-btn" data-page="turn-1">
+              <span class="text-btn">Next</span>
+              <i class="bx bx-chevron-right"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="book-page page-right turn" id="turn-2">
+          <div class="page-front">
+            <div class="second-page">
+              <h3 class="text">Move your mouse here...</h3>
+              <h2 class="text-1">
+                Be <img src="./assets/rose.png" alt="" /> happy...
+              </h2>
+            </div>
+
+            <!-- Next button -->
+            <span class="nextprev-btn" data-page="turn-2">
+              <span class="text-btn">Next</span>
+              <i class="bx bx-chevron-right"></i>
+            </span>
+
+            <!-- Prev button -->
+            <span class="nextprev-btn back" data-page="turn-1">
+              <span class="back-btn">Back</span>
+              <i class="bx bx-chevron-left"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="book-page page-right turn" id="turn-3">
+          <div class="page-front">
+            <h1>Page3</h1>
+
+            <!-- Prev button -->
+            <span class="nextprev-btn back" data-page="turn-2">
+              <span class="back-btn">Back</span>
+              <i class="bx bx-chevron-left"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
