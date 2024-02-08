@@ -32,28 +32,6 @@ body{
     perspective: 250rem;
     overflow: hidden;
 }
-p{
-    line-height: 1.8rem;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-style: oblique;
-    font-size: medium;
-    text-align: justify;
-    height: 50%;
-}
-h1{
-    margin-top: 30px;
-}
-
-h5{
-    font: icon;
-    font-size: small;
-    margin-top: 20px;
-}
-
-.check-mark {
-    color: #2091f4;
-}
 
 h6 {
     margin-bottom: 10px;
@@ -81,6 +59,7 @@ h6 {
         transform: rotate(0deg);
     }
 }
+
 
 .cover {
     position: absolute;
@@ -133,104 +112,79 @@ h6 {
     padding: 2rem;
 }
 
-.profile-page{
+
+.book-page.page-right {
+    position: absolute;
+    right: 0;
+    transform-style: preserve-3d;
+    transform-origin: top;
+    transition: transform 2s cubic-bezier(.275, .152, .115, 1) ;
+}
+
+.book-page.page-right.turn {
+    transform: rotateX(-90deg);
+}
+
+.book-page .page-front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 2rem;
+}
+
+.book-page .page-front{
+    transform: rotateX(0deg) translateZ(1px);
+}
+
+.book-page .page-back{
+    transform: rotateX(90deg) translateZ(1px);
+}
+
+.nextprev-btn{
+    position: absolute;
+    width: 3rem;
+    height: 2rem;
+    bottom: .5rem;
+    right: .8rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--second-text-color);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
+
+.text-btn {
+    position: absolute;
+    bottom: .5rem;
+    right: 2rem;
+    font-size: small;
+}
+
+.back-btn {
+    position: absolute;
+    bottom: .5rem;
+    left: 2rem;
+    font-size: small;
+}
+
+.nextprev-btn.back {
+    left: .8rem;
+}
+
+.nextprev-btn:hover {
+    color: #0bb6f5;
+}
+
+/* 1st Page */
 
 .main-page{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-}
-
-.second-page {
-    background: #67899f;
-    width: 100%;
-    height: 95%;
-    border-radius: 4px;
-    border: 1px solid;
-    padding: 10px;
-}
-
-h4 {
-    background: url("https://cdn2.iconfinder.com/data/icons/animals/256/Butterfly.png");
-    width: 80px;
-    height: 80px;
-    background-size: cover;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    animation: heart-animate 15s linear;
-}
-
-@keyframes heart-animate {
-    0% {
-        transform: translate(-50%, -50%);
-        opacity: 1;
-        filter: hue-rotate(0);
-    }
-    100% {
-        transform: translate(-5000%, -3000%);
-        opacity: 0;
-        filter: hue-rotate(4200deg);
-    }
-}
-
-.text {
-    position: absolute;
-    top:30%;
-    left: 55%;
-    transform: translate(-50%, -40%);
-    color: rgb(242, 229, 229);
-    opacity: 1;
-    scale: 1.2;
-    animation: none;
-}
-
-@keyframes text-animate {
-    0%{
-     opacity: 100%;
-    }
-    20%{
-        opacity: 80%;
-       }
-       40%{
-        opacity: 60%;
-       }
-       60%{
-        opacity: 40%;
-       }
-       80%{
-        opacity: 20%;
-       }
-       100%{
-        opacity: 0;
-       }
-}
-
-.text-1 {
-    position: absolute;
-    color:rgb(185, 103, 130);
-    font-style: oblique;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    animation: none;
-}
-
-@keyframes bee {
-    0%,40%,80% {
-        opacity: 0;
-    }
-    30%,60%,90% {
-        opacity: 1;
-    }
 }
 
 .list-main {
@@ -251,6 +205,31 @@ h4 {
 .list-main a:hover {
     scale: .9;
 }
+
+p{
+    line-height: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-style: oblique;
+    font-size: medium;
+    text-align: justify;
+    height: 50%;
+}
+h1{
+    margin-top: 30px;
+}
+
+h5{
+    font: icon;
+    font-size: small;
+    margin-top: 20px;
+}
+
+.check-mark {
+    color: #2091f4;
+}
+
+/* dropdwon menu */
 
 .menubar{
     position: absolute;
@@ -341,72 +320,101 @@ h4 {
     background-color: #afabab;
 }
 
-.book-page.page-right {
-    position: absolute;
-    right: 0;
-    transform-style: preserve-3d;
-    transform-origin: top;
-    transition: transform 2s cubic-bezier(.275, .152, .115, 1) ;
-}
 
-.book-page.page-right.turn {
-    transform: rotateX(-90deg);
-}
+/* 2nd Page */
 
-.book-page .page-front,
-.book-page .page-back{
-    position: absolute;
-    top: 0;
-    left: 0;
+.second-page {
+    background: #67899f;
     width: 100%;
-    height: 100%;
-    padding: 1.5rem 2rem;
+    height: 95%;
+    border-radius: 4px;
+    border: 1px solid;
+    padding: 10px;
 }
 
-.book-page .page-front{
-    transform: rotateX(0deg) translateZ(1px);
-}
-
-.book-page .page-back{
-    transform: rotateX(90deg) translateZ(1px);
-}
-
-.nextprev-btn{
+.text {
     position: absolute;
-    width: 3rem;
-    height: 2rem;
-    bottom: .5rem;
-    right: .8rem;
-    cursor: pointer;
-    font-size: 2rem;
-    color: var(--second-text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    top:30%;
+    left: 55%;
+    transform: translate(-50%, -40%);
+    color: rgb(242, 229, 229);
+    opacity: 1;
+    scale: 1.2;
+    animation: none;
 }
 
-.text-btn {
+@keyframes text-animate {
+    0%{
+     opacity: 100%;
+    }
+    20%{
+        opacity: 80%;
+       }
+       40%{
+        opacity: 60%;
+       }
+       60%{
+        opacity: 40%;
+       }
+       80%{
+        opacity: 20%;
+       }
+       100%{
+        opacity: 0;
+       }
+}
+
+.text-1 {
     position: absolute;
-    bottom: .5rem;
-    right: 2rem;
-    font-size: small;
+    color:rgb(185, 103, 130);
+    font-style: oblique;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: none;
 }
 
-.back-btn {
+@keyframes bee {
+    0%,40%,80% {
+        opacity: 0;
+    }
+    30%,60%,90% {
+        opacity: 1;
+    }
+}
+
+
+/* Butterflies */
+
+h4 {
+    background: url("https://cdn2.iconfinder.com/data/icons/animals/256/Butterfly.png");
+    width: 80px;
+    height: 80px;
+    background-size: cover;
     position: absolute;
-    bottom: .5rem;
-    left: 2rem;
-    font-size: small;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: heart-animate 15s linear;
 }
 
-.nextprev-btn.back {
-    left: .8rem;
+@keyframes heart-animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+    100% {
+        transform: translate(-5000%, -3000%);
+        opacity: 0;
+        filter: hue-rotate(4200deg);
+    }
 }
 
-.nextprev-btn:hover {
-    color: #0bb6f5;
-}
+
+
 
 @media (max-width: 500px) {
     .list-main{
