@@ -16,31 +16,39 @@
       <div class="cover cover-left">
         <h6>Copyright © 2024 Khosro shariatzadeh</h6>
       </div>
-      <!-- <div class="cover cover-right"></div> -->
 
       <div class="book">
-        <div class="book-page page-right turn" id="turn-1">
-          <!-- page 1 -->
+        <!-- page 1 -->
+        <div class="book-page page-right">
           <div class="page-front">
             <div class="main-page">
-              <div class="list-main">
-                <a href="https://github.com/Khosroshariat/Butterflies" target="_blank">
-                  <i class="bx bx-checkbox-square"></i>Git Repo</a
-                >
-                <a href="" target="_blank">
-                  <i class="bx bx-checkbox-square"></i>Portfolio</a
-                >
-                <a
-                  href="https://www.linkedin.com/in/khosro-sh/"
-                  target="_blank"
-                >
-                  <i class="bx bx-checkbox-square"></i>Linkedin</a
-                >
-              </div>
+              <div class="nav">
+                <div class="nav-text">
+                  <i class="bx bx-code nav-img"></i>
+                  <span class="nav-logo">Butterflies</span>
+                </div>
+                <div class="list-main">
+                  <a
+                    href="https://github.com/Khosroshariat/Butterflies"
+                    target="_blank"
+                  >
+                    <i class="bx bx-checkbox-square"></i>Git Repo</a
+                  >
+                  <a href="" target="_blank">
+                    <i class="bx bx-checkbox-square"></i>Portfolio</a
+                  >
+                  <a
+                    href="https://www.linkedin.com/in/khosro-sh/"
+                    target="_blank"
+                  >
+                    <i class="bx bx-checkbox-square"></i>Linkedin</a
+                  >
+                </div>
 
-              <button onclick="openMenu()" class="btn-open">
-                <i class="bx bx-menu"></i>
-              </button>
+                <button onclick="openMenu()" class="btn-open">
+                  <i class="bx bx-menu"></i>
+                </button>
+              </div>
 
               <div class="menubar">
                 <span onclick="closeMenu()" class="btn-close"
@@ -65,28 +73,37 @@
                 >
               </div>
 
-              <h1>Butterflies</h1>
-              <p>
-                By moving your mouse to the gray frame of the next page, you
-                will make thousands of butterflies fly across the page.
-              </p>
+              <div class="page1-items">
+                <h1>Coding project :</h1>
+                <p class="main-para">
+                  <span class="color">Butterflies</span> is a coding project
+                  that uses the below skills to create a dynamic object on the
+                  screen when you move the mouse over the screen. On the next
+                  page, by moving your mouse to the gray frame, you will make
+                  thousands of butterflies fly across the page. On the last
+                  page, you can find the details of the code.
+                </p>
 
-              <h5><i class="bx bxs-check-shield check-mark"></i> HTML</h5>
-              <h5><i class="bx bxs-check-shield check-mark"></i> CSS Layout</h5>
-              <h5>
-                <i class="bx bxs-check-shield check-mark"></i> CSS Animation
-              </h5>
-              <h5>
-                <i class="bx bxs-check-shield check-mark"></i> Javascript
-                Functions
-              </h5>
-              <h5>
-                <i class="bx bxs-check-shield check-mark"></i> Javascript If/Els
-              </h5>
+                <h5><i class="bx bxs-check-shield check-mark"></i> HTML</h5>
+                <h5>
+                  <i class="bx bxs-check-shield check-mark"></i> CSS Layout
+                </h5>
+                <h5>
+                  <i class="bx bxs-check-shield check-mark"></i> CSS Animation
+                </h5>
+                <h5>
+                  <i class="bx bxs-check-shield check-mark"></i> Javascript
+                  Functions
+                </h5>
+                <h5>
+                  <i class="bx bxs-check-shield check-mark"></i> Javascript
+                  If/Els
+                </h5>
+              </div>
             </div>
 
             <!-- Next button -->
-            <span class="nextprev-btn" data-page="turn-1">
+            <span class="nextprev-btn" data-page="turn-2">
               <span class="text-btn">Next</span>
               <i class="bx bx-chevron-right"></i>
             </span>
@@ -103,13 +120,13 @@
             </div>
 
             <!-- Next button -->
-            <span class="nextprev-btn" data-page="turn-2">
+            <span class="nextprev-btn" data-page="turn-3">
               <span class="text-btn">Next</span>
               <i class="bx bx-chevron-right"></i>
             </span>
 
             <!-- Prev button -->
-            <span class="nextprev-btn back" data-page="turn-1">
+            <span class="nextprev-btn back" data-page="turn-2">
               <span class="back-btn">Back</span>
               <i class="bx bx-chevron-left"></i>
             </span>
@@ -118,10 +135,46 @@
 
         <div class="book-page page-right turn" id="turn-3">
           <div class="page-front">
-            <h1>Page3</h1>
+            <div class="last-page">
+              <h1>The code :</h1>
+              <p class="last-para">
+                First, I use the document.querySelector method to target and use
+                the specific HTML element as a screen to move the mouse over it
+                to make butterflies. Then I used the addEventListener function
+                to make butterflies, in this function: I created two
+                variables(xPos, yPos) to set the position of the butterflies on
+                the screen, and to animate these butterflies I used the
+                animation method(keyframes) inside the CSS file for the “h4”
+                elements. I also used “document.createElement()” ,
+                “Math.random()” and “appendChild()” methodes to make the
+                butterflies. <br />
+                <span class="color">1.</span> document.createElement() method:
+                By using this method, I created “h4” element and stored it in a
+                variable named “butterflies” to make the butterflies. But first
+                I styled the “h4” element inside the CSS file using the
+                different CSS properties to make sure the butterflies would
+                appear on the screen correctly. (You can use any HTML tag
+                element to make the butterflies but make sure you do not use
+                this tag element inside the entire project for another thing.)
+                <br />
+                <span class="color">2.</span> Math.random() method: By using
+                this method, I create a random size for the butterflies each
+                time they appear on the screen. Then by using the “style”
+                method, I target the specific property in the CSS file for the
+                “h4” element which are width and height in my project to replace
+                them with these random sizes. <br /><span class="color"
+                  >3.</span
+                >
+                appendChild() method: By using this method, I added the
+                butterflies that were created to the screen that I targeted at
+                the beginning. In the end, I use the setTimeout() function to
+                remove the butterflies from the screen after a specific amount
+                of time.
+              </p>
+            </div>
 
             <!-- Prev button -->
-            <span class="nextprev-btn back" data-page="turn-2">
+            <span class="nextprev-btn back" data-page="turn-3">
               <span class="back-btn">Back</span>
               <i class="bx bx-chevron-left"></i>
             </span>

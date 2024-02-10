@@ -1,63 +1,21 @@
 // turn page when click next or prev button
 const pageTurnBtn = document.querySelectorAll(".nextprev-btn");
 
-pageTurnBtn.forEach((elm, index) => {
+pageTurnBtn.forEach((elm) => {
     elm.onclick = () => {
         const pageTurnId = elm.getAttribute('data-page');
         const pageTurn = document.getElementById(pageTurnId);
 
         if(pageTurn.classList.contains('turn')) {
             pageTurn.classList.remove('turn');
-            setTimeout(() => {
-                pageTurn.style.zIndex = 20 - index
-            }, 500)
         }
         else{
             pageTurn.classList.add('turn');
-            setTimeout(() => {
-                pageTurn.style.zIndex = 20 + index
-            }, 500)
         }
     }
 })
 
-
-// create reverse index function
-const pages = document.querySelectorAll(".book-page.page-right");
-let totalPage = pages.length;
-let pageNumber = 0;
-
-function reverseIndex() {
-  pageNumber--;
-  if (pageNumber < 0) {
-    pageNumber = totalPage - 1;
-  }
-}
-
-// pages openning animation
-const coverRight = document.querySelector(".cover.cover-right");
-
-setTimeout(() => {
-  coverRight.classList.add("turn");
-}, 2100);
-
-setTimeout(() => {
-  coverRight.style.zIndex = - 1;
-}, 2800);
-
-// all pages top animation
-pages.forEach((_, index) => {
-  setTimeout(() => {
-    reverseIndex();
-    pages[pageNumber].classList.remove("turn");
-    setTimeout(() => {
-      reverseIndex();
-      pages[pageNumber].style.zIndex = 10 + index;
-    }, 500);
-  }, (index + 1) * 200 + 2700);
-});
-
-// menu bar
+// dropdwon menubar
 
 function openMenu() {
   const openmenu = document.querySelector(".menubar")
@@ -69,12 +27,11 @@ function closeMenu() {
   openmenu.style.display = "none"
 }
 
-//  making heart animation 
+//  making Butterflies and animate them 
 
 const bodyEl = document.querySelector('.second-page')
 
 bodyEl.addEventListener("mousemove", (event) => {
-  // console.log("yessss")
   const xPos = event.offsetX
   const yPos = event.offsetY
 
@@ -85,20 +42,20 @@ bodyEl.addEventListener("mousemove", (event) => {
   },3000)
 
   const text1 = document.querySelector(".text-1")
-  text1.style.animation = "bee 4s infinite"
+  text1.style.animation = "text1 4s infinite"
   text1.style.opacity = "1"
 
-  const flowerEl = document.createElement("h4")
-  flowerEl.style.left = xPos + "px";
-  flowerEl.style.top = yPos + "px";
+  const butterflies = document.createElement("h4")
+  butterflies.style.left = xPos + "px";
+  butterflies.style.top = yPos + "px";
 
   const size = Math.random()*40;
-  flowerEl.style.width = size + "px"
-  flowerEl.style.height = size + "px"
+  butterflies.style.width = size + "px"
+  butterflies.style.height = size + "px"
 
-  bodyEl.appendChild(flowerEl)
+  bodyEl.appendChild(butterflies)
 
   setTimeout (() => {
-    flowerEl.remove()
+    butterflies.remove()
   },3500)
 })
