@@ -13,92 +13,103 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="cover cover-left">
+      <div class="copyright">
         <h6>Copyright © 2024 Khosro shariatzadeh</h6>
       </div>
+      <div class="nav">
+        <div class="nav-text">
+          <i class="bx bx-code nav-img"></i>
+          <span class="nav-logo">Butterflies</span>
+        </div>
+        <div class="list-main">
+          <a
+            href="https://github.com/Khosroshariat/Butterflies"
+            target="_blank"
+          >
+            <i class="bx bx-checkbox-square"></i>Git Repo</a
+          >
+          <a href="" target="_blank">
+            <i class="bx bx-checkbox-square"></i>Portfolio</a
+          >
+          <a href="https://www.linkedin.com/in/khosro-sh/" target="_blank">
+            <i class="bx bx-checkbox-square"></i>Linkedin</a
+          >
+        </div>
+
+        <button onclick="openMenu()" class="btn-open">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+
+      <div class="menubar">
+        <span onclick="closeMenu()" class="btn-close"
+          ><i class="bx bxs-x-circle"></i
+        ></span>
+        <a
+          onclick="closeMenu()"
+          class="link"
+          href="https://github.com/Khosroshariat/Butterflies"
+          target="_blank"
+          ><i class="bx bx-checkbox-square"></i> Git Repo</a
+        >
+        <a onclick="closeMenu()" class="link" href="" target="_blank"
+          ><i class="bx bx-checkbox-square"></i> Portfolio</a
+        >
+        <a
+          onclick="closeMenu()"
+          class="link"
+          href="https://www.linkedin.com/in/khosro-sh/"
+          target="_blank"
+          ><i class="bx bx-checkbox-square"></i> Linkedin</a
+        >
+      </div>
+      <div class="cover cover-left"></div>
 
       <div class="book">
         <!-- page 1 -->
         <div class="book-page page-right">
           <div class="page-front">
             <div class="main-page">
-              <div class="nav">
-                <div class="nav-text">
-                  <i class="bx bx-code nav-img"></i>
-                  <span class="nav-logo">Butterflies</span>
-                </div>
-                <div class="list-main">
-                  <a
-                    href="https://github.com/Khosroshariat/Butterflies"
-                    target="_blank"
-                  >
-                    <i class="bx bx-checkbox-square"></i>Git Repo</a
-                  >
-                  <a href="" target="_blank">
-                    <i class="bx bx-checkbox-square"></i>Portfolio</a
-                  >
-                  <a
-                    href="https://www.linkedin.com/in/khosro-sh/"
-                    target="_blank"
-                  >
-                    <i class="bx bx-checkbox-square"></i>Linkedin</a
-                  >
-                </div>
-
-                <button onclick="openMenu()" class="btn-open">
-                  <i class="bx bx-menu"></i>
-                </button>
-              </div>
-
-              <div class="menubar">
-                <span onclick="closeMenu()" class="btn-close"
-                  ><i class="bx bxs-x-circle"></i
-                ></span>
-                <a
-                  onclick="closeMenu()"
-                  class="link"
-                  href="https://github.com/Khosroshariat/Butterflies"
-                  target="_blank"
-                  ><i class="bx bx-checkbox-square"></i> Git Repo</a
-                >
-                <a onclick="closeMenu()" class="link" href="" target="_blank"
-                  ><i class="bx bx-checkbox-square"></i> Portfolio</a
-                >
-                <a
-                  onclick="closeMenu()"
-                  class="link"
-                  href="https://www.linkedin.com/in/khosro-sh/"
-                  target="_blank"
-                  ><i class="bx bx-checkbox-square"></i> Linkedin</a
-                >
-              </div>
-
               <div class="page1-items">
                 <h1 class="title">Coding project :</h1>
                 <p class="main-para">
                   <span class="color">Butterflies</span> is a coding project
                   that uses the below skills to create a dynamic object on the
                   screen when you move the mouse over the screen. On the next
-                  page, by moving your mouse to the gray frame, you will make
-                  thousands of butterflies fly across the page. On the last
+                  page, by moving your mouse to the pink frame (on the smart
+                  phone you need to tap on the pink screen instead), you will
+                  make thousands of butterflies fly across the page. On the last
                   page, you can find the details of the code.
                 </p>
 
-                <h5><i class="bx bxs-check-shield check-mark"></i> HTML</h5>
-                <h5>
-                  <i class="bx bxs-check-shield check-mark"></i> CSS Layout
-                </h5>
-                <h5>
-                  <i class="bx bxs-check-shield check-mark"></i> CSS Animation
-                </h5>
-                <h5>
-                  <i class="bx bxs-check-shield check-mark"></i> Javascript
-                  Functions
-                </h5>
-                <h5>
-                  <i class="bx bxs-check-shield check-mark"></i> Javascript
-                  If/Els
-                </h5>
+                <div class="new-items">
+                  <div>
+                    <h5><i class="bx bxs-check-shield check-mark"></i> HTML</h5>
+                    <h5>
+                      <i class="bx bxs-check-shield check-mark"></i> CSS Layout
+                    </h5>
+                    <h5>
+                      <i class="bx bxs-check-shield check-mark"></i> CSS
+                      Animation
+                    </h5>
+                    <h5>
+                      <i class="bx bxs-check-shield check-mark"></i> Javascript
+                      Functions
+                    </h5>
+                    <h5>
+                      <i class="bx bxs-check-shield check-mark"></i> Javascript
+                      If/Els
+                    </h5>
+                  </div>
+
+                  <div>
+                    <img
+                      class="img-inside"
+                      src="./assets/butterfly.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
